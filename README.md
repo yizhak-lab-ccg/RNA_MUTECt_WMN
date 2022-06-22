@@ -5,10 +5,17 @@ and **should be used after running [RNA_MuTect](https://github.com/broadinstitut
 This pipeline runs on a Linux machine only.
 
 ## Requirements
-1. python packages: pandas, NumPy, sklearn, matplotlib
-2. [CAPY](https://github.com/getzlab/CApy/tree/master/capy) python package
-3. [Funcotator](https://gatk.broadinstitute.org/hc/en-us/articles/360035889931-Funcotator-Information-and-Tutorial) as part of the [gatk](https://gatk.broadinstitute.org/hc/en-us/articles/360036194592-Getting-started-with-GATK4) package
-4. Samtools: [bgzip](http://www.htslib.org/doc/bgzip.html), [bcftools](https://samtools.github.io/bcftools/bcftools.html), [tabix](http://www.htslib.org/doc/tabix.html)
+1. python3 packages:
+   * pandas (1.1.5+)
+   * NumPy (1.19.4+)
+   * scikit-learn (0.23.2+)
+   * matplotlib (3.3.3+)
+2. [CAPY](https://github.com/getzlab/CApy/tree/master/capy) python package (0.1+)
+3. [Funcotator](https://gatk.broadinstitute.org/hc/en-us/articles/360035889931-Funcotator-Information-and-Tutorial) as part of the [gatk](https://gatk.broadinstitute.org/hc/en-us/articles/360036194592-Getting-started-with-GATK4) package (4.2.6.1+)
+4. Samtools: 
+   * [bgzip](http://www.htslib.org/doc/bgzip.html) (1.11+)
+   * [bcftools](https://samtools.github.io/bcftools/bcftools.html) (1.8+)
+   * [tabix](http://www.htslib.org/doc/tabix.html) (1.11+)
 5. ~300 GB space: the 'resource' folder will be around 230 GB, and more space will be required (depending on the number of samples).
 
 ## Input files and directory tree
