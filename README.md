@@ -1,5 +1,7 @@
 # RNA-Mutect-WMN
-This pipeline implements the method described in [Estimating tumor mutational burden from RNA-sequencing without a matched-normal sample](https://www.nature.com/articles/s41467-022-30753-2), and should be used after running [RNA_MuTect](https://github.com/broadinstitute/RNA_MUTECT_1.0-1).
+This pipeline implements the method described in 
+[Estimating tumor mutational burden from RNA-sequencing without a matched-normal sample](https://www.nature.com/articles/s41467-022-30753-2), 
+and **should be used after running [RNA_MuTect](https://github.com/broadinstitute/RNA_MUTECT_1.0-1).**
 This pipeline runs on a Linux machine only.
 
 ## Requirements
@@ -41,17 +43,21 @@ The `config.py` file should be configured by the user.
 ## Running instructions
 
 ### Inputs preparation
-After downloading the repo, [directory configuration](#Input-files-and-directory-tree) should be done, using the `config.py` file:
-* Under the 'Data' folder:
-  * create a 'cancer_dir' folder and configure its name in `config.py`.
-* Under the 'cancer_dir' folder:
-  * Create an 'input' folder, and under it a 'maf' and 'call_stats' folders. 
-  * Download 'call_stats_capture_paper_v1_3.tsv' files into 'call_stats' folder.
-  * Download 'maf_file_rna_final_paper_v1_3.tsv' files into 'maf folder'.
-* Under the 'resource' folder:
-  * download the pon binary files (DNA & RNA) into the 'pon' folder
-  * download the reference files (including .fasta.fai and .dict files) into the 'reference' folder
-  * configure downloaded file names in `config.py`.
+1. As mentioned before, the input of this tool is the output of [RNA-MuTect](https://github.com/broadinstitute/RNA_MUTECT_1.0-1). 
+A cloud implementation can be found in [Terra](https://app.terra.bio/#workspaces/broad-firecloud-gtex/RNA_MuTect).
+2. Details for location of PoN files are in the [manuscript](https://www.nature.com/articles/s41467-022-30753-2) under 'Data Availability'.
+3. The human reference genome hg19 reference files should be used.
+4. After downloading the repo, [directory configuration](#Input-files-and-directory-tree) should be done, using the `config.py` file:
+   * Under the 'Data' folder:
+     * create a 'cancer_dir' folder and configure its name in `config.py`.
+   * Under the 'cancer_dir' folder:
+     * Create an 'input' folder, and under it a 'maf' and 'call_stats' folders. 
+     * Download 'call_stats_capture_paper_v1_3' files (RNA-MuTect output) into 'call_stats' folder.
+     * Download 'maf_file_rna_final_paper_v1_3' files (RNA-MuTect output) into 'maf folder'.
+   * Under the 'resource' folder:
+     * download the pon binary files (DNA & RNA) into the 'pon' folder
+     * download the reference files (including .fasta.fai and .dict files) into the 'reference' folder
+     * configure downloaded file names in `config.py`.
 
 
 ### Run pipeline
