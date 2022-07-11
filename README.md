@@ -52,6 +52,7 @@ The `config.py` file should be configured by the user.
 ### Inputs preparation
 1. As mentioned before, the input of this tool is the output of [RNA-MuTect](https://github.com/broadinstitute/RNA_MUTECT_1.0-1). 
 A cloud implementation can be found in [Terra](https://app.terra.bio/#workspaces/broad-firecloud-gtex/RNA_MuTect).
+    * In order to run RNA-MuTect any normal sample can be used and it does not require the matched-normal sample.
 2. Details for location of PoN files are in the [manuscript](https://www.nature.com/articles/s41467-022-30753-2) under 'Data Availability'.
 3. The human reference genome hg19 reference files should be used.
 4. After downloading the repo, [directory configuration](#Input-files-and-directory-tree) should be done, using the `config.py` file:
